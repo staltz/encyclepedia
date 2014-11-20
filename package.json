@@ -1,0 +1,19 @@
+{
+  "name": "encyclepedia",
+  "version": "0.0.0",
+  "author": "Andre Staltz",
+  "dependencies": {
+    "cyclejs": "0.6.0",
+    "jquery": "^2.1.1"
+  },
+  "devDependencies": {
+    "browserify": "~2.36.0",
+    "watchify": "^2.1.1"
+  },
+  "scripts": {
+    "browserify": "browserify src/app.js -o dist/js/app.js",
+    "dev": "watchify src/app.js -o dist/js/app.js",
+    "preinstall": "rm -rf build && rm -rf node_modules",
+    "postinstall": "ln -s ../src node_modules/encyclepedia"
+  }
+}
